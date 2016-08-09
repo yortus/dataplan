@@ -1,5 +1,9 @@
 ### Concepts
 
+- [ ] main aims:
+  - automatic DB schema creation/synchronisation/migration/access/management
+  - strongly-typed DB access and manipulation (with TypeScript)
+
 - [ ] basic tables with a PK column 'id', and a list of other columns
 
 - [ ] annotations/decorators
@@ -11,6 +15,12 @@
   - unique
   - part of alternate key
   - virtual/computed/cached etc
+
+- [ ] in-DB metadata:
+  - see current tabular impl
+  - table/column display names
+  - column order
+  - ???
 
 - [ ] table relationship 'is-a':
   - e.g. A1 extends A
@@ -33,6 +43,17 @@
 
 - [ ] virtual/computed columns
 
+- [ ] DB querying (select)
+  - do all complex stuff in views / virtual tables / virtual columns
+  - queries ONLY:
+    - filter columns by name
+    - filter rows by simple cell exprs
+    - paginate
+    - group? aggregate?
+
+- [ ] DB manipulation (create/update/delete)
+
+- [ ] DDL support? i.e. dynamically modifying table/column schemas?
 - [ ] 
 - [ ] 
 - [ ] 
@@ -48,6 +69,27 @@
 - [ ] 
 - [ ] 
 - [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+
+
+
+### API
+
+```ts
+// prefer strong-typing everywhere!
+
+dp.registerTables(...)
+
+dp.verifySchema(...)
+dp.migrateSchema(...)
+
+
+dp.query(...)
+
+
+dp.update
+dp.delete
+dp.create
+
+
+
+```
