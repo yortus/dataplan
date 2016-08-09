@@ -92,4 +92,16 @@ dp.create
 
 
 
+tableX.select()
+    .allOf(
+        anyOf(
+            equals(
+
+            )
+        ),
+        includes(
+            
+        )
+    )
+
 ```
