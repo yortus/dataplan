@@ -24,19 +24,35 @@ class Employee extends Participant {
 
 @view(Participant, Employee)
 class TeamMember {
-
   	firstName: string;
-
 	lastName: string;
 
-
+	// TODO: how to compute these?
 	leaderships: string;
-
-
 	memberships: string;
-
 }
 
+
+// has-a (implies cascading delete, update, etc)
+class Customer {
+	orders: CustomerOrder[]; // implies containment
+}
+class CustomerOrder {
+	// backlink to Customer? added automatically?
+	lines: CustomerOrderLine[];
+}
+class CustomerOrderLine {
+	// backlink to CustomerOrder? added automatically?
+}
+
+
+// refs-a
+class OrderLine {
+	product: Product; // implies cross-reference
+}
+class Product {
+	// backlink to OrderLine[] list? added automatically?
+}
 
 
 // TODO: decorator defns

@@ -6,6 +6,7 @@
   - column basic datatype
   - primary key
   - nullable
+  - readonly / getter
   - json column
   - unique
   - part of alternate key
@@ -18,9 +19,11 @@
 
 - [ ] table relationship 'has-a':
   - e.g. Customer has 0..M CustomerOrder, CustomerOrder has 1 Customer
+  - implies cascading delete, update, etc (FK relationship)
 
 - [ ] table relationship 'refs-a':
   - e.g. OrderLine refs a Product
+  - implies referential integrity checks (FK relationship)
 
 - [ ] automatic schema management, code generation, migrations, validations
 
