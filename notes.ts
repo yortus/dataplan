@@ -1,8 +1,10 @@
 @table
 class Participant {
 
+	constructor(x: {foo;bar;}) {}
+
   	@pk
-  	id: number;
+  	id: number = 42;
 
 	@json
 	roles: string[];
@@ -56,7 +58,7 @@ class Product {
 
 
 // TODO: decorator defns
-var table;
-var pk;
-var json;
+function table(...args) {}
+function pk(...args) {}
+function json(...args) {}
 function view(...args) { return (...tables) => {}; }

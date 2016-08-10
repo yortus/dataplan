@@ -91,6 +91,10 @@ dp.delete
 dp.create
 
 
+var pi = <unit type> 3.14
+var pi = 3.14 as unit type;
+
+
 
 tableX.select()
     .allOf(
@@ -100,7 +104,7 @@ tableX.select()
             )
         ),
         includes(
-            
+
         )
     )
 
